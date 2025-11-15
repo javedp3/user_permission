@@ -1,0 +1,26 @@
+Task 1-
+User & Group + Permissions
+•	Create a user john with a home directory /home/team/john.
+•	Create a group teamlead and make john a member.
+•	Create a directory /project/data owned by john:teamlead.
+•	Set permissions so only owner and group can access it.
+(Others should have no permission.)
+
+solution:-
+
+1st create user by using command
+- useradd -m -d /home/team/john john
+  * m for home directory /home/john
+  * d for home directory change /home/team/john
+2nd create group by using groupadd command
+- groupadd teamlead
+3rd create directory
+- mkdir -p /project/data
+4th owner is john and group is teamlead
+- chown john:teamlead /project/data
+5th change permissions owner and group can access other is denied
+- chmod 770 /project/data
+To verify 
+- ls -ld /project/data
+drwxrwx---. 2 john teamlead 6 Nov 15 21:46 /project/data/
+
