@@ -1,0 +1,13 @@
+Scheduler (Cron Job) 
+• Add amit user and set password “test” 
+• After 2 minutes login mode 
+• After 4 minutes no login mode
+
+Solution:- 
+- crontab -e 
+    - Starting from min Hours-time(am/pm) date month week  /usr/ sbin/useradd amit
+    - 51  22-24 15 11 * /usr/sbin/useradd -u amit11
+    - */1  22-24 15 11 * /usr/bin/echo "test"|passwd amit11 --stdin
+    - */2  22-24 15 11 * /usr/sbin/usermod -U amit11
+    - */2  22-24 15 11 * /usr/sbin/usermod -L amit11
+
