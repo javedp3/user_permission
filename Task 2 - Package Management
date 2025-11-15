@@ -1,0 +1,15 @@
+Package Management
+•	Install the package vim.
+•	Check the version installed.
+•	Remove the package ftp if it exists.
+
+Solution:- 
+RHEL/CentOS/Fedora -1-> dnf/yum install vim -y
+                    2-> Check version 
+                        vim --version
+                    3-> dnf/yum remove ftp -y
+    Ubuntu/Debian - 1-> apt updatae
+                        apt install vim -y
+                    2-> check version
+                        vim --version
+                    3-> apt remove ftp -y
